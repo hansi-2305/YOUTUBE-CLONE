@@ -1,21 +1,65 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
+// import HomeIcon from "@mui/icons-material/Home"
+import Button from "@mui/material/Button";
+import ExploreIcon from "@mui/icons-material/Explore";
+import HomeIcon from "@mui/icons-material/Home";
+import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import MovieIcon from "@mui/icons-material/Movie";
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import SettingsIcon from "@mui/icons-material/Settings";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import FeedbackIcon from "@mui/icons-material/Feedback";
+import WhatshotIcon from "@mui/icons-material/Whatshot";
+import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
+import StreamIcon from "@mui/icons-material/Stream";
+import NewspaperIcon from "@mui/icons-material/Newspaper";
+import SportsCricketIcon from "@mui/icons-material/SportsCricket";
+import SchoolIcon from "@mui/icons-material/School";
+import DiamondIcon from "@mui/icons-material/Diamond";
+import PodcastsIcon from "@mui/icons-material/Podcasts";
+import FlagIcon from "@mui/icons-material/Flag";
+
+
+
+
 
 
 const Sidebar = () => {
 
     const isMenuOpen=useSelector((store)=>store.app.isMenuOpen);
-
+    const theme =useSelector((store)=>store.app.theme);
 
     //early return pattern
 
     if(!isMenuOpen) return null;
     
   return (
-    <div className="p-5  shadow-lg w-52 ">
-        <ul>
-            <li><Link to="/">Home</Link></li>
+    <div className={" mt-16 p-5 shadow-lg w-8 bg-black "+
+    (!theme?"bg-black":"bg-white")}>
+      {/* <ul>
+         <Link to={"/"}>
+          <li
+            className={
+              "cursor-pointer px-4 py-1  rounded-lg " +
+              (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+            }
+          >
+            {" "}
+            <Button
+              variant="text"
+              startIcon={<HomeIcon />}
+              className="pl-2"
+              style={{
+                color: !theme ? "white" : "black",
+                textTransform: "none",
+              }}
+            >
+              Home
+            </Button>
+          </li>
+        </Link>
             <li>Short</li>
             <li>Videos</li>
             <li>Live</li>
@@ -33,8 +77,383 @@ const Sidebar = () => {
             <li>Sports</li>
             <li>Gaming</li>
             <li>Movies</li>
-        </ul>
+        </ul> */}
 
+<ul>
+        <Link to={"/"}>
+          <li
+            className={
+              "cursor-pointer px-4 py-1  rounded-lg " +
+              (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+            }
+          >
+            {" "}
+            <Button
+              variant="text"
+              startIcon={<HomeIcon />}
+              className="pl-2"
+              style={{
+                color: !theme ? "white" : "black",
+                textTransform: "none",
+              }}
+            >
+              Home
+            </Button>
+          </li>
+        </Link>
+
+        <li
+          className={
+            "cursor-not-allowed px-4 py-1  rounded-lg " +
+            (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+          }
+        >
+          <Button
+            variant="text"
+            startIcon={<WhatshotIcon />}
+            className="pl-2"
+            style={{
+              color: !theme ? "white" : "black",
+              textTransform: "none",
+            }}
+          >
+            Shorts
+          </Button>
+        </li>
+
+        <Link to={"/live"}>
+          <li
+            className={
+              "cursor-pointer px-4 py-1  rounded-lg " +
+              (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+            }
+          >
+            <Button
+              variant="text"
+              startIcon={<StreamIcon />}
+              className="pl-2"
+              style={{
+                color: !theme ? "white" : "black",
+                textTransform: "none",
+              }}
+            >
+              Live
+            </Button>
+          </li>
+        </Link>
+        <li
+          className={
+            "cursor-pointer px-4 py-1  rounded-lg " +
+            (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+          }
+        >
+          <Button
+            variant="text"
+            startIcon={<SubscriptionsIcon />}
+            className="pl-2"
+            style={{
+              color: !theme ? "white" : "black",
+              textTransform: "none",
+            }}
+          >
+            Subscription
+          </Button>
+        </li>
+      </ul>
+      <div
+        className={`border mt-2 mx-2 ${
+          !theme ? "border-gray-800" : "border-gray-200"
+        }`}
+      ></div>
+      <h1
+        className={
+          "pt-2 text-xl mx-10 font-bold " +
+          (!theme ? "text-white" : "text-black")
+        }
+      >
+        Explore
+      </h1>
+
+      <ul>
+        <Link to={"/category/trending"}>
+          <li
+            className={
+              "cursor-pointer px-4 py-1  rounded-lg " +
+              (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+            }
+          >
+            <Button
+              variant="text"
+              startIcon={<ExploreIcon />}
+              className="pl-2"
+              style={{
+                color: !theme ? "white" : "black",
+                textTransform: "none",
+              }}
+            >
+              Trending
+            </Button>
+          </li>
+        </Link>
+
+        <Link to={"/category/music"}>
+          <li
+            className={
+              "cursor-pointer px-4 py-1  rounded-lg " +
+              (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+            }
+          >
+            <Button
+              variant="text"
+              startIcon={<MusicNoteIcon />}
+              className="pl-2"
+              style={{
+                color: !theme ? "white" : "black",
+                textTransform: "none",
+              }}
+            >
+              Music
+            </Button>
+          </li>
+        </Link>
+        <Link to={"/category/movies"}>
+          <li
+            className={
+              "cursor-pointer px-4 py-1  rounded-lg " +
+              (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+            }
+          >
+            <Button
+              variant="text"
+              startIcon={<MovieIcon />}
+              className="pl-2"
+              style={{
+                color: !theme ? "white" : "black",
+                textTransform: "none",
+              }}
+            >
+              Movies
+            </Button>
+          </li>
+        </Link>
+        <Link to={"/category/Gaming"}>
+          <li
+            className={
+              "cursor-pointer px-4 py-1  rounded-lg " +
+              (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+            }
+          >
+            <Button
+              variant="text"
+              startIcon={<SportsEsportsIcon />}
+              className="pl-2"
+              style={{
+                color: !theme ? "white" : "black",
+                textTransform: "none",
+              }}
+            >
+              Gaming
+            </Button>
+          </li>
+        </Link>
+        <Link to={"/category/news"}>
+          <li
+            className={
+              "cursor-pointer px-4 py-1  rounded-lg " +
+              (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+            }
+          >
+            <Button
+              variant="text"
+              startIcon={<NewspaperIcon />}
+              className="pl-2"
+              style={{
+                color: !theme ? "white" : "black",
+                textTransform: "none",
+              }}
+            >
+              News
+            </Button>
+          </li>
+        </Link>
+        <Link to={"/category/Sports"}>
+          <li
+            className={
+              "cursor-pointer px-4 py-1  rounded-lg " +
+              (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+            }
+          >
+            <Button
+              variant="text"
+              startIcon={<SportsCricketIcon />}
+              className="pl-2"
+              style={{
+                color: !theme ? "white" : "black",
+                textTransform: "none",
+              }}
+            >
+              Sports
+            </Button>
+          </li>
+        </Link>
+        <Link to={"/category/learning"}>
+          <li
+            className={
+              "cursor-pointer px-4 py-1  rounded-lg " +
+              (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+            }
+          >
+            {" "}
+            <Button
+              variant="text"
+              startIcon={<SchoolIcon />}
+              className="pl-2"
+              style={{
+                color: !theme ? "white" : "black",
+                textTransform: "none",
+              }}
+            >
+              Learning
+            </Button>
+          </li>{" "}
+        </Link>
+        <Link to={"/category/fashion"}>
+          <li
+            className={
+              "cursor-pointer px-4 py-1  rounded-lg " +
+              (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+            }
+          >
+            <Button
+              variant="text"
+              startIcon={<DiamondIcon />}
+              className="pl-2"
+              style={{
+                color: !theme ? "white" : "black",
+                textTransform: "none",
+              }}
+            >
+              Fashion & Beauty
+            </Button>
+          </li>
+        </Link>
+        <Link to={"/category/podcast"}>
+          <li
+            className={
+              "cursor-pointer px-4 py-1  rounded-lg " +
+              (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+            }
+          >
+            <Button
+              variant="text"
+              startIcon={<PodcastsIcon />}
+              className="pl-2"
+              style={{
+                color: !theme ? "white" : "black",
+                textTransform: "none",
+              }}
+            >
+              Podcast
+            </Button>
+          </li>
+        </Link>
+      </ul>
+
+      <div className="my-2 border border-black"></div>
+      <ul>
+        <li
+          className={
+            "cursor-pointer px-4 py-1  rounded-lg " +
+            (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+          }
+        >
+          {" "}
+          <Button
+            variant="text"
+            startIcon={<SettingsIcon />}
+            className="pl-2"
+            style={{
+              color: !theme ? "white" : "black",
+              textTransform: "none",
+            }}
+          >
+            Setting
+          </Button>
+        </li>{" "}
+        <li
+          className={
+            "cursor-pointer px-4 py-1  rounded-lg " +
+            (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+          }
+        >
+          <Button
+            variant="text"
+            startIcon={<FlagIcon />}
+            className="pl-2"
+            style={{
+              color: !theme ? "white" : "black",
+              textTransform: "none",
+            }}
+          >
+            Report History
+          </Button>
+        </li>
+        <li
+          className={
+            "cursor-pointer px-4 py-1  rounded-lg " +
+            (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+          }
+        >
+          {" "}
+          <Button
+            variant="text"
+            startIcon={<HelpOutlineIcon />}
+            className="pl-2"
+            style={{
+              color: !theme ? "white" : "black",
+              textTransform: "none",
+            }}
+          >
+            Help
+          </Button>
+        </li>
+        <li
+          className={
+            "cursor-pointer px-4 py-1  rounded-lg " +
+            (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+          }
+        >
+          <Button
+            variant="text"
+            startIcon={<FeedbackIcon />}
+            className="pl-2"
+            style={{
+              color: !theme ? "white" : "black",
+              textTransform: "none",
+            }}
+          >
+            Feedback
+          </Button>
+        </li>
+        <li
+          className={
+            "cursor-pointer px-4 py-1  rounded-lg " +
+            (!theme ? "hover:bg-gray-800" : "hover:bg-gray-200")
+          }
+        >
+          <Button
+            variant="text"
+            startIcon={<FeedbackIcon />}
+            className="pl-2"
+            style={{
+              color: !theme ? "white" : "black",
+              textTransform: "none",
+            }}
+          >
+            Vikramaitya Singh
+          </Button>
+        </li>
+      </ul>
 
 
     </div>
