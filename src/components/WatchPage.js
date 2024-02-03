@@ -21,7 +21,7 @@ const WatchPage = () => {
 
     const isMenuOpen=useSelector((store)=>store.app.isMenuOpen);
 
-    console.log("live is",Live)
+    console.log("click is",Live)
 
 
     useEffect(()=>{

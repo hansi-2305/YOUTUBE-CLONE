@@ -6,7 +6,7 @@ import PopularVideo from './PopularVideo'
 const MainContainer = () => {
   console.log("MAIN CONTAINER")
   return (
-    <div className="mt-[3rem] md:mt-[6rem] md:m-6  md:bg-black">
+    <div className="mt-[3rem] md:mt-[6rem] md:m-6  md:bg-black ">
         <ButtonList/>
         {/* <VideoContainer/> */}
         <PopularVideo/>

@@ -26,7 +26,7 @@ const VideoContainer = ({videos,type}) => {
     // <div className= {" absolute justify-center flex flex-wrap" + (!theme ? "bg-black" : "bg-white")}>
     <div
     className={
-      "  mt-2 absolute  justify-center  flex flex-wrap "  +
+      "  mt-2   justify-center  flex flex-wrap "  +
       (!theme ? "bg-black" : "bg-white")
     }>
       {/* {videos[0] && <AdVideoCard info={videos[0]}/>} */}

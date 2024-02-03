@@ -50,7 +50,7 @@ const PopularVideo = () => {
 
      return (
         <div
-      className={`absolute justify-center flex flex-wrap overflow-y-auto pt-12 ${
+      className={` justify-center flex flex-wrap overflow-y-auto pt-12 ${
         !theme ? "bg-black" : "bg-white"}`}
 
       ref={containerRef}

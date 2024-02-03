@@ -332,7 +332,7 @@ const LiveChat = () => {
             onChange={(e)=>{
             setLiveMessage(e.target.value);
             }}/>
-            <button className="px-2 mx-2 bg-green-100">Send</button>
+            <button className={"px-2 mx-2 bg-green-100"+(!theme ? "text-white" : "text-black")}>Send</button>
         </form>
 
         </div>

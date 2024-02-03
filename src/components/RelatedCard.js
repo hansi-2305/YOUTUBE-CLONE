@@ -343,7 +343,7 @@ const RelatedCard = ({ video }) => {
   const { medium } = thumbnails;
 
   return (
-    <Link
+    <Link  to={video.id ? "/watch?v=" + video.id : "#"}
            
     >
     <div className={`flex m-2 ${!theme ? 'text-white' : 'text-black'}`}>
