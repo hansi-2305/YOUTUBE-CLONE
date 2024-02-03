@@ -283,15 +283,15 @@
 // export const AdVideoCard = ({ video }) => {
 //   return (
 //     <div className="p-1 m-1 border border-red-900">
-//       <VideoCards video={video} ad={true} />
-//     </div>
-//   );
-// };
+// //       <VideoCards video={video} ad={true} />
+// //     </div>
+// //   );
+// // };
 
-// export default VideoCards;
+// // export default VideoCards;
 
 
-// VideoCards.js
+// // VideoCards.js
 
 // import { useEffect } from 'react';
 // import { useDispatch } from 'react-redux';
